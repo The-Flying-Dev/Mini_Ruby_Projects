@@ -11,7 +11,7 @@ end
 p odd_numbers
 
 # Using the above example:
-# 1. What is our Collection?
-# 2. What is our accumulator?
-# 3. What sort of statement are we calling in the block?
-# 4. What do you think our return value will be?
+# 1. What is our Collection? # => numbers
+# 2. What is our accumulator? # => odd_numbers
+# 3. What sort of statement are we calling in the block? # => boolean statement
+# 4. What do you think our return value will be? # => odd_numbers Collection containing only values that met the condition within the block == odd values

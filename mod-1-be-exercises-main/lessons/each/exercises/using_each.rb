@@ -5,11 +5,14 @@
 
 students = ["Megan", "Bob", "Mike"]
 # your code below
+students.each do |student|
+  puts student
+end
 
 
 
 # Once you have your code written out:
 # What will the return value be:
-# - the first iteration through?
-# - the second iteration through?
-# - the third iteration through?
+# - the first iteration through? # => Megan 
+# - the second iteration through? # => Bob
+# - the third iteration through? # => Mike
