@@ -18,3 +18,11 @@
          #if no block given then ruby adds implicit block { |obj| obj } returns true if no elements are true
 #one?    # => Returns true if exactly one element meets the condition / 
          #if no block given then ruby adds implicit block { |obj| obj } returns true if only one element is true
+
+#What do map, find, and find_all do? What do they return?
+# => returns first element that matches given condition within the block
+
+#What makes an enumerable preferable to each?
+# => No need to declare an accumulator as enumerables will return a new array with elements that meet the given condition within the block while leaving the original array unchanged
+#What does the ? on the end of a method indicate?
+# => The method will return a boolean value 
