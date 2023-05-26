@@ -1,3 +1,4 @@
+require 'rspec'
 require './lib/vampire'
 
 RSpec.describe Vampire do

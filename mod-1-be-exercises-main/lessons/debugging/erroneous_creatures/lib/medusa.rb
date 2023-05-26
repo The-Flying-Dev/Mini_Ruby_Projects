@@ -10,7 +10,8 @@ class Medusa
 
   def stare(x)
     x.stone = true
-    @statues = x
+    #@statues = x Reassigned instance variable instead of adding to the array
+    @statues << x
   end
 
   def statues
@@ -34,3 +35,5 @@ class Person
   end
 
 end
+
+

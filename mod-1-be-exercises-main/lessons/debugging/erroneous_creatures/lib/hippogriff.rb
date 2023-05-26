@@ -6,7 +6,8 @@ class Hippogriff
   def initialize(name, color)
     @name = name
     @color = color
-    moonrocks = []
+    # moonrocks = [] => missing @
+    @moonrocks = []
   end
 
   def fly(rock)

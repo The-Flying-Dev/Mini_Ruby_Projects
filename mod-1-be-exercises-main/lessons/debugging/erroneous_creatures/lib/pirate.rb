@@ -6,7 +6,7 @@ class Pirate
     @name = name
     @job = job
     @cursed = 0
-    @patch = true
+    @patch = true    
   end
 
   def cursed?
@@ -14,7 +14,8 @@ class Pirate
   end
 
   def commit_heinous_act
-    @cursed + 1
+    # @cursed + 1
+    @cursed += 1
   end
 
   def say(x)

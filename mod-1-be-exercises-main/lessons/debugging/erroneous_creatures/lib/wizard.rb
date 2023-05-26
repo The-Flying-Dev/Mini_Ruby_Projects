@@ -8,8 +8,9 @@ class Wizard
     @bearded = bearded
   end
 
-  def bearded?
-    @bearded
+  def bearded? # Needed to access the Hash value using the key 
+    #@bearded 
+    @bearded[:bearded]
   end
 
   def incantation(x)

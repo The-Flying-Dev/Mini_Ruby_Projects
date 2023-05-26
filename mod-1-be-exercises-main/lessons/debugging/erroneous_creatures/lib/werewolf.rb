@@ -1,8 +1,9 @@
 class Werewolf
   attr_reader :name
-              :location
+              #:location
 
-  attr_accessor :human,
+  attr_accessor :location, # => Allows instance variable to read and write 
+                :human,
                 :change,
                 :werewolf
 

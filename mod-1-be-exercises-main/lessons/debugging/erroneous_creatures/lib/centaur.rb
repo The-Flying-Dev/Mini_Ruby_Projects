@@ -9,6 +9,7 @@ class Centaur
     @standing = standing
     @laying = laying
     @sleeping = sleeping
+    @crankiness = 0 # Needed to declare instance variable
   end
 
   def shoot
@@ -21,19 +22,21 @@ class Centaur
   end
 
   def run
-   @crankiness += 1
-   if @crankiness < 3
-     "Clop clop clop clop!!!"
-   else
-     "NO!"
-   end
+    @crankiness += 1
+    if @crankiness < 3
+      "Clop clop clop clop!!!"
+    else
+      "NO!"
+    end
   end
 
   def cranky?
     if @crankiness < 3
-      "false"
+      # "false"
+      false # Change string value to boolean   
     else
-      "true"
+      # "true"
+      true  # Change string value to boolean 
     end
   end
 
