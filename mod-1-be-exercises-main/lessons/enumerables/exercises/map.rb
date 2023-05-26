@@ -3,7 +3,10 @@
 
 def kennedy_brothers
   brothers = ["Robert", "Ted", "Joseph", "John"]
-  brothers.map { |brother| brother.upcase }
+  #brothers.map { |brother| brother.upcase }
+  brothers.map do |brother|
+    brother.upcase
+  end
 
   #caps_brothers = []
   

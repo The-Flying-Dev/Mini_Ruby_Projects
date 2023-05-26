@@ -48,7 +48,10 @@ def backwards
     names = ["alice", "bob", "charlie", "david", "eve"]
 
     # Your code goes here
-    names.map {|name| name.reverse}
+    #names.map {|name| name.reverse}
+    names.map do |name|
+        name.reverse
+    end
     
     # expected return value is ["ecila", "bob", "eilrahc", "divad", "eve"]
 end
