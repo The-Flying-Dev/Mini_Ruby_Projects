@@ -84,7 +84,7 @@ RSpec.describe 'Strings' do
   it 'test 10' do
     greeting = "Hello!!\n\n"
     # In place of the line below, call a method to achieve the expected output.
-    actual = greeting.chop 
+    actual = greeting.chomp # greeting.chop
     expected = "Hello!!\n"
 
     expect(actual).to eq(expected)
