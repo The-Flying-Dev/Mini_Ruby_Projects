@@ -32,7 +32,7 @@ RSpec.describe 'Hashes' do
 
     # There are two different syntaxes for doing this. Use the other way to
     # achieve the same result
-    ages = {'ben': 4, 'kelly': 6}
+    ages = {ben: 4, kelly: 6}
     expect(ages.length).to eq(2)
     expect(ages[:ben]).to eq(4)
     expect(ages[:kelly]).to eq(6)
