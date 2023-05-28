@@ -29,8 +29,10 @@ Tests:
 
 * Now that `stop` and `start` are extracted to the module, add back in a `start` or `stop` method in one of your class. Have it return the string **"WAIIIIIIIT"**.
 * What happens when you run this method? Why?
+# => The string "WAIIIIIIIT" is printed because the start method defined in class Camry takes precedence over the start method defined in the Engine module
 
 ## Summary
-* Can you create a `Vehicle` module that holds both engine and AC functionality?
-  * Should you?
+* Can you create a `Vehicle` module that holds both engine and AC functionality? # => Completed
+  * Should you? # => It really will depend on future requirements, since there is only 2 small classes with minimal functionality it will be okay  
 * What might the benefits of separating Engine and AC functionality into different modules?
+# => Each module will contain methods dealing with certain behaviours

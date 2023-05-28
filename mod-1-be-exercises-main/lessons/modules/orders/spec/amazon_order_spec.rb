@@ -1,4 +1,4 @@
-require './lib/amazon_order'
+require '../lib/amazon_order'
 
 RSpec.describe AmazonOrder do
   before :each do

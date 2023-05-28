@@ -28,6 +28,6 @@ Tests:
   1. Run the tests to check if the classes still work after your refactors
 
 ## Questions
-  1. What is similar/different between the two main classes?
-  2. What design principle(s) are we breaking? Prepare to explain.
-  3. How might we use mixins to make our code better?
+  1. What is similar/different between the two main classes? # => Both have methods that are the same and the difference is the parameters of both display methods
+  2. What design principle(s) are we breaking? Prepare to explain. # => There is a duplication of code when comparing both classes
+  3. How might we use mixins to make our code better? # => Extract the methods from both classes and place them in a new file under the module name

@@ -1,4 +1,4 @@
-require './lib/grubhub_order'
+require '../lib/grubhub_order'
 
 RSpec.describe GrubhubOrder do
   before :each do

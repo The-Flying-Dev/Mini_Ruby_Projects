@@ -11,7 +11,7 @@ RSpec.describe Camry do
 
   it 'can start' do
     expect(@camry.start).to eq("Engine on!")
-  end
+  end     
 
   it 'can stop' do
     expect(@camry.stop).to eq("Engine off!")
@@ -19,5 +19,13 @@ RSpec.describe Camry do
 
   it 'can drive' do
     expect(@camry.drive).to eq("Back wheels go!")
+  end
+
+  it 'can turn aircon on' do 
+    expect(@camry.aircon_on).to eq("Chilly air coming your way!")
+  end
+
+  it 'can turn aircon off' do 
+    expect(@camry.aircon_off).to eq("temp is fine in here")
   end
 end
