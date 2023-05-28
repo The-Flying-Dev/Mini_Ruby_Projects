@@ -6,5 +6,5 @@ class Costume
   end
 end
 
-first1 = Costume.new("Dragon")
-p first1.style 
+# first1 = Costume.new("Dragon")
+# p first1.style 

@@ -27,12 +27,12 @@ class Bag
   end
 end
 
-bag = Bag.new
-bag.add_candy(Candy.new("Lindt chocolate"))
-bag.add_candy(Candy.new("chocolates"))
+# bag = Bag.new
+# bag.add_candy(Candy.new("Lindt chocolate"))
+# bag.add_candy(Candy.new("chocolates"))
 
-bag.add_candy(Candy.new("Mars Bar"))
-p bag.candies
-p bag.contains?("Mars Bar")
-type = bag.candies.first.type
-p type 
+# bag.add_candy(Candy.new("Mars Bar"))
+# p bag.candies
+# p bag.contains?("Mars Bar")
+# type = bag.candies.first.type
+# p type 
