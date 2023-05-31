@@ -11,7 +11,8 @@ class Employee
   end
 
   def total_compensation
-    # Uncomment the pry below, and check what the value of @base_salary and @bonus is. Where do these values come from?
+    # Uncomment the pry below, and check what the value of @base_salary and @bonus is. 
+    # Where do these values come from? # => These values are defined in the child classes
     # binding.pry
     @base_salary + @bonus
   end

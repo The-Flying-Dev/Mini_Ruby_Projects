@@ -15,3 +15,7 @@ p pets[:cat][:weight] # => 15 pounds
 pets[:dog][:age] = 3
 
 p pets 
+
+
+# .keys and .push(obj)
+# What is the outer Data Structure and what are the inner Data Structures # => outer Data Structure is a Hash and inner Data Structures are Hashes

@@ -112,10 +112,20 @@ denver_biscuit_co = {
 # Return the closing hour on Saturday (day 5) ("1500")
 # Return the current open status (is_now_open) (true)
 
+# p denver_biscuit_co[:name]
+# p denver_biscuit_co[:rating]
+# p denver_biscuit_co[:transactions]
+# p denver_biscuit_co[:categories][0][:title]
+# p denver_biscuit_co[:hours][0][:open][1][:start]
+# p denver_biscuit_co[:hours][0][:open][5][:end]
+# p denver_biscuit_co[:hours][0][:is_open_now]
+
 # Challenge 2: 
 # Get the address, and return it into a readable format. ("3237 E Colfax Ave, Denver, CO 80206" )
 # Return a list of categories this restaurant fits into (["Sandwiches", "Breakfast & Brunch"])
 
+# p denver_biscuit_co[:location][:display_address].join(" ")
+# p denver_biscuit_co[:categories].map { |x| x[:title] }
 
 # Challenge 3 (extra spicy): 
 # Get the operation hours, and format a return value such that it looks like this: 
