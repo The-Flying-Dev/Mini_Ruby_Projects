@@ -149,3 +149,16 @@ denver_biscuit_co = {
 
 # }
 # Note: day 0 is Monday, day 6 is Sunday
+#operation_hours = {}
+days_of_the_week = [:Monday, :Tuesday, :Wednesday, :Thursday, :Friday, :Saturday, :Sunday]
+days_hash = days_of_the_week.each_with_object({}) do |day, hash|
+                hash[day] = {}
+            end
+#p days_hash
+# get hours array
+operation_hours = denver_biscuit_co[:hours][0][:open]
+operation_hours = operation_hours.map do |day|
+        day.except(:is_overnight)
+    end
+p days_hash
+p operation_hours
