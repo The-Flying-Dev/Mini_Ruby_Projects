@@ -21,9 +21,14 @@ RSpec.describe Circle do
     expect(c.radius).to eq(15)
   end  
   
-  it "has a circumference" do 
+  # it "has a circumference" do 
+  #   c = Circle.new("red", 15)
+  #   expect(c.circumference).to eq(94.2)
+  # end
+
+  it "can calculate perimeter" do
     c = Circle.new("red", 15)
-    expect(c.circumference).to eq(94.2)
+    expect(c.perimeter).to eq(94.2)
   end
 
   it "has a diameter" do 
@@ -49,12 +54,7 @@ RSpec.describe Circle do
   it "has no width" do 
     c = Circle.new("red", 15)
     expect(c.width).to eq(nil)
-  end
-
-  # it "can calculate perimeter" do
-  #   c = Circle.new("red", 15)
-  #   expect(r.perimeter).to eq(30)
-  # end
+  end 
   
 end
 

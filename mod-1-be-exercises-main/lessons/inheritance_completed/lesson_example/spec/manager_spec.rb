@@ -3,12 +3,12 @@ require "./lib/manager"
 RSpec.describe Manager do
   describe "setup" do
     it "exists" do
-      manager = Manager.new(12, "Manny", 02)
+      manager = Manager.new(12, "Manny", 2)
       expect(manager).to be_a Manager
     end
 
     it "has base_salary, per_team_rate, and departments attributes" do
-      manager = Manager.new(12, "Manny", 02)
+      manager = Manager.new(12, "Manny", 2)
       expect(manager.base_salary).to eq(12)
       expect(manager.per_team_rate).to eq 5
       expect(manager.departments).to be_instance_of Array
@@ -16,14 +16,14 @@ RSpec.describe Manager do
     end
 
     it "can add_department" do
-      manager = Manager.new(12, "Manny", 02)
+      manager = Manager.new(12, "Manny", 2)
       manager.add_department("Sales")
       expect(manager.departments).to eq(["Sales"])
       expect(manager.departments.length).to eq(1)
     end
 
     it "has benefits to start with" do
-      manager = Manager.new(12, "Manny", 02)
+      manager = Manager.new(12, "Manny", 2)
       expect(manager.benefits).to eq([:sick_leave, :health_insurance])
     end
   end
@@ -34,27 +34,27 @@ RSpec.describe Manager do
     # Write at least one test that proves they can access this method.
 
     it "is_a Employee" do 
-      manager = Manager.new(12, "Manny", 02)
+      manager = Manager.new(12, "Manny", 2)
       expect(manager.is_a? Employee).to be true 
     end
     
     it "has a name" do 
-      manager = Manager.new(12, "Manny", 02)
+      manager = Manager.new(12, "Manny", 2)
       expect(manager.name).to eq("Manny")
     end
 
     it "has a ID" do 
-      manager = Manager.new(12, "Manny", 02)
-      expect(manager.id).to eq(02)
+      manager = Manager.new(12, "Manny", 2)
+      expect(manager.id).to eq(2)
     end
 
     it "still has 2 benefits to start with" do
-      manager = Manager.new(12, "Manny", 02)
+      manager = Manager.new(12, "Manny", 2)
       expect(manager.benefits).to eq([:sick_leave, :health_insurance])
     end
 
     it "has total compensation" do 
-      manager = Manager.new(12, "Manny", 02)
+      manager = Manager.new(12, "Manny", 2)
       expect(manager.total_compensation).to eq(72)
     end
   end

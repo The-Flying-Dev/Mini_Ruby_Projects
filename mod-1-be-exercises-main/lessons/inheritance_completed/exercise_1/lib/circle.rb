@@ -16,6 +16,10 @@ class Circle < Shape
     (2 * (3.14 * @radius)).round(1)
   end
 
+  def perimeter # overriding method of the same name in superclass
+    (2 * (3.14 * @radius)).round(1)    
+  end
+
   def diameter
     2 * @radius
   end
@@ -25,3 +29,8 @@ class Circle < Shape
   end
   
 end
+
+# c = Circle.new("red", 15)
+# p c.default_family
+# p c.circumference
+# p c.perimeter

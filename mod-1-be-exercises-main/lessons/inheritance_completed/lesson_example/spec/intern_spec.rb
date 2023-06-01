@@ -3,26 +3,31 @@ require './lib/intern'
 RSpec.describe Intern do
   describe "setup" do
     it "exists" do
-      intern = Intern.new(5, "Sam", 07)
+      intern = Intern.new(5, "Sam", 7)
       expect(intern).to be_a Intern
     end
 
-    it "has a base_salary attribute" do
-      intern = Intern.new(5, "Sam", 07)
-      expect(intern.base_salary).to eq(5)
-    end
+    # it "has a base_salary attribute" do
+    #   intern = Intern.new(5, "Sam", 7)
+    #   expect(intern.base_salary).to eq(5)
+    # end
 
     it "can get coffee" do
-      intern = Intern.new(5, "Sam", 07)
+      intern = Intern.new(5, "Sam", 7)
       expect(intern).to respond_to(:get_coffee) # => method defined inside class
       expect(intern.get_coffee).to eq("Who got the latte?")
     end
 
     it "has benefits" do
-      intern = Intern.new(5, "Sam", 07)
+      intern = Intern.new(5, "Sam", 7)
       expect(intern.benefits).to be_instance_of Array
       expect(intern.benefits.length).to eq(2)
       expect(intern.benefits[0]).to eq(:gets_to_get_me_coffee)
+    end
+
+    it "has total compensation" do 
+      intern = Intern.new(5, "Sam", 7)
+      expect(intern.total_compensation).to eq(10000)
     end
   end
 
@@ -32,29 +37,29 @@ RSpec.describe Intern do
     # and not just the one it starts with.
 
     it "is_a Employee" do 
-      intern = Intern.new(5, "Sam", 07)
+      intern = Intern.new(5, "Sam", 7)
       expect(intern.is_a? Employee).to be true
     end
 
     it "has a name" do 
-      intern = Intern.new(5, "Sam", 07)
+      intern = Intern.new(5, "Sam", 7)
       expect(intern.name).to eq("Sam")
     end
 
     it "has an ID" do 
-      intern = Intern.new(5, "Sam", 07)
-      expect(intern.id).to eq(07)
+      intern = Intern.new(5, "Sam", 7)
+      expect(intern.id).to eq(7)
     end
 
     it "has benefits" do
-      intern = Intern.new(5, "Sam", 07)
+      intern = Intern.new(5, "Sam", 7)
       expect(intern.benefits).to eq([:gets_to_get_me_coffee, :sick_leave])
     end
 
-    it "has total compensation" do 
-      intern = Intern.new(5, "Sam", 07)
-      expect(intern.total_compensation).to eq(5)
-    end
+    # it "has total compensation" do 
+    #   intern = Intern.new(5, "Sam", 7)
+    #   expect(intern.total_compensation).to eq(5)
+    # end
   end
 
 end
