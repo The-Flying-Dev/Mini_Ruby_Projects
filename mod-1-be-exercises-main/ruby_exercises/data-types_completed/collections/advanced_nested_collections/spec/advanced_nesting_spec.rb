@@ -123,8 +123,16 @@ RSpec.describe 'Advanced Nested Collections' do
 
   it 'test 10' do
     # Return the full menu for Olive Garden
+    # => created empty Hash
+    # => accessed the array of hashes
+    # => then interated over that collection of hashes
+    # => set the new Hash keys equal to the symbols :name and the values equal to each iterated hash
+    menu = {}
+    stores[:olive_garden][:dishes].each do |hash|
+      menu[hash[:name]] = hash
+    end
 
-    olive_garden_menu = _____
+    olive_garden_menu = menu
     
     expected = {
       "Risotto" => {
@@ -143,7 +151,26 @@ RSpec.describe 'Advanced Nested Collections' do
 
   it 'test 11' do
     # Return a full menu across all restaurants
-    full_menu = ____
+    # => used same process as in test 10
+    # => first created individual hashes for each menu it 
+    # => then used merge method to combine all 3 Hashes and assigned the return value to full_menu variable
+    olive_garden = {}
+    dennys = {}
+    macdonalds = {}
+
+    stores[:olive_garden][:dishes].each do |h|
+      olive_garden[h[:name]] = h 
+    end
+
+    stores[:dennys][:dishes].each do |h|
+      dennys[h[:name]] = h 
+    end
+
+    stores[:macdonalds][:dishes].each do |h|
+      macdonalds[h[:name]] = h
+    end
+
+    full_menu = olive_garden.merge(dennys, macdonalds)
 
     expected = {
       "Risotto" => {
