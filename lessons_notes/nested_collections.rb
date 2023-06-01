@@ -99,7 +99,25 @@ ages = [
 
 ages_array = []
 ages.each do |inner_array|
-  ages_array << inner_array[1]
+  #ages_array << inner_array[1]
+  p inner_array[1]
+end
+
+
+# Level 2:
+
+names = []
+ages.each do |inner_array|
+  names << inner_array[0]
+  names.sort. each do |name|
+    p name
+  end
+end
+
+# Level 3:
+
+ages.each do |inner_array|
+  p "#{inner_array[0]} (#{inner_array[1]})"
 end
 
 # p ages_array # => [33, 15, 24, 32, 24, 24]
