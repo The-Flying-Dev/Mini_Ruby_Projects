@@ -29,3 +29,6 @@ class Vehicle
     big_back_wheels
   end
 end
+
+vehicle = Vehicle.new("tractor", true, true)
+p vehicle.four_wheel_drive?
