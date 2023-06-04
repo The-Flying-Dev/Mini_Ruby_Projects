@@ -15,7 +15,7 @@ class Course
 
   def groups_represented
     listed_groups = []
-    @students.each do |student| 
+    @students.each do |student| # calling the group attr on block variable and adding to array
       listed_groups << student.group
     end 
     listed_groups.uniq 
