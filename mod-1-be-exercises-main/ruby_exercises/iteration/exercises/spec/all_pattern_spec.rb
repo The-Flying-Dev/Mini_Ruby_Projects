@@ -29,6 +29,7 @@ RSpec.describe 'all pattern' do
     all_four_letters = true
     words.each do |word|
       # Your Code Here
+      all_four_letters = false unless word.length == 4 
     end
     expect(all_four_letters).to be true
   end

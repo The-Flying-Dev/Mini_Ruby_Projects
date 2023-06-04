@@ -1,3 +1,6 @@
+require_relative 'course'
+require_relative 'student'
+
 class School
   attr_reader :name, :groups, :courses
 

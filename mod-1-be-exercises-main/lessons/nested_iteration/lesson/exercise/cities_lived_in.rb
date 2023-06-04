@@ -10,7 +10,17 @@ cities_lived_in = {
 # Get a unique list of all of the cities that these humans have lived in  
 # ["Philadelphia", "Fort Collins", "Seattle", "Denver", "Santa Fe", "Portland", "Lansing", "Columbus", "Austin"]
 
+# unique_cities =  cities_lived_in.values.flatten.uniq
+# p unique_cities
 
+cities = []
+cities_lived_in.each do |k, v|
+    v.each do |city|
+        cities.push(city) unless cities.include?(city)
+    end    
+end
+
+p cities
 
 
 # Problem #2: 
@@ -21,7 +31,15 @@ cities_lived_in = {
 # or
 # ["Michaela", "Mike", "Alex"]
 
+# p cities_lived_in.map {|k,v| k if v.include?("Philadelphia") }.compact
+# p cities_lived_in.map {|k,v| k.to_s.capitalize if v.include?("Philadelphia") }.compact
 
+ex_philly_residents = []
+cities_lived_in.each do |k, v|
+    #ex_philly_residents << k if v.include?("Philadelphia")
+    ex_philly_residents << k.to_s.capitalize if v.include?("Philadelphia") 
+end
+p ex_philly_residents
 
 
 # Problem #3: 
@@ -38,3 +56,18 @@ cities_lived_in = {
 #     "Columbus => 1,
 #     "Austin" => 1
 # }
+
+# tally_hash = cities_lived_in.values.flatten.tally
+# p tally_hash
+
+# Getting all values into 2d array 
+# Iterate through the 2d array, then iterate over each element and storing it's count in the new hash
+city_hash = Hash.new(0)
+cities_lived_in.values.each do |values_array|
+    values_array.each do |element|
+        city_hash[element] +=1
+    end
+end
+
+p city_hash
+p cities_lived_in.values

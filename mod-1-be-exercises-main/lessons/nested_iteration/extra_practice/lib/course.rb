@@ -1,3 +1,5 @@
+require_relative 'student'
+
 class Course
   attr_reader :name, :professor, :students
 
@@ -10,4 +12,13 @@ class Course
   def add_student(student)
     @students << student
   end
+
+  def groups_represented
+    listed_groups = []
+    @students.each do |student| 
+      listed_groups << student.group
+    end 
+    listed_groups.uniq 
+  end
 end
+

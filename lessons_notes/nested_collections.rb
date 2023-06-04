@@ -115,7 +115,6 @@ ages.each do |inner_array|
 end
 
 # Level 3:
-
 ages.each do |inner_array|
   p "#{inner_array[0]} (#{inner_array[1]})"
 end

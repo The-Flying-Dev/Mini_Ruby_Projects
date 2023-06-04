@@ -216,6 +216,14 @@ characters = [
 
 # ["Tatooine", "Naboo", "Alderaan" ... ]
 
+homeworlds = characters.map { |character| character[:homeworld] }.uniq
+#p homeworlds
+
+# characters.each do |character|
+#     homeworlds << character[:homeworld] # key is in quotes but is still a symbol
+# end
+# p homeworlds.uniq
+
 
 # Challenge #2
 
@@ -223,8 +231,12 @@ characters = [
 
 # ["Luke Skywalker", "Darth Vader", "Biggs Darklighter" ... ]
 
+chars_with_starships = []
+characters.each do |character|
+    chars_with_starships << character[:name] unless character[:starships].empty?
+end
 
-
+#p chars_with_starships
 # CHALLENGE #3
 
 # Create a new hash such that each character points to their collection of starships: 
@@ -238,6 +250,14 @@ characters = [
 #     ...
 #     ...
 # }
+starships_collection = {}
+# accessed each nested hash, use the value of each :name key and assign the new keys of the new hash those values 
+# and the values equal to the array of the starships
+characters.each do |character|
+    starships_collection[character[:name]] = character[:starships]
+end
+
+#p starships_collection
 
 
 # Challenge #4 
@@ -251,3 +271,51 @@ characters = [
 #      ...
 #      ...
 # }
+
+
+films = []
+films_one_d = []
+characters.each do |h|
+    films << h[:films]
+end
+
+films.each do |sub_array|
+    sub_array.each do |i|
+        films_one_d.push(i) unless films_one_d.include?(i)
+    end
+end
+
+films_one_d
+char_hash = {}
+
+characters.each do |h|
+    char_hash[h[:name]] = h[:films]
+end
+
+char_hash
+movie_chars_hash = {}
+
+films_one_d.each do |ele|
+    movie_chars_hash[ele] = []
+end
+
+#movie_chars_hash
+
+# steps:
+# created array containing all movies
+# created new Hash with characters as keys and their films as name values as arrays
+# Created new empty hash 
+# Assigned elements from movies array as keys in new Hash
+# Iterated through character/film Hash, checked for truthy value, then updated Hash
+
+char_hash.each do |k, v|
+    for i in films_one_d
+        if v.include?(i)
+            #movie_chars_hash[films_one_d[0]].push(char_hash.key(v)) unless movie_chars_hash[films_one_d[0]].include?(char_hash.key(v))
+            movie_chars_hash[i] << char_hash.key(v) unless movie_chars_hash[i].include?(char_hash.key(v))
+        end
+    end 
+    movie_chars_hash
+end
+
+p movie_chars_hash
