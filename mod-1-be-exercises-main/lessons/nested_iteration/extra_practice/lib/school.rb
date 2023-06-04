@@ -17,4 +17,8 @@ class School
   def assign_to_group(student)
     student.group = @groups.sample
   end
+
+  # def group_all_students
+    
+  # end
 end

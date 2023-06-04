@@ -1,8 +1,8 @@
-#require 'barkable'
+# require_relative 'barkable'
 require 'pry'
 
 class Dog
-  #include Barkable
+  # include Barkable
 
   attr_reader :name, :number_of_woofs
   def initialize(name)
@@ -18,8 +18,9 @@ class Dog
 
   def woof
     #binding.pry ## When calling .woof on a Dog class, will this pry be hit?
-    "Woof!"
     @number_of_woofs += 1
+    "Woof!"
+    #@number_of_woofs += 1
   end
 
   def self.woof

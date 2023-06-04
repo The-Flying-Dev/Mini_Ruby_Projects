@@ -6,7 +6,7 @@ user = User.new("Parker")
 puts user.say_hello
 
 
-## Create many instances of Users, and see what they look like in Pry.
+## Create many instances of Users, and see what they look like in Pry. # => Array of Hashes
 users = [
     {name: "Sal"},
     {name: "Brian"},
@@ -14,4 +14,4 @@ users = [
   ]
 
 user_objects = User.create_multiple(users)
-#binding.pry ## What is user_objects?
+binding.pry ## What is user_objects? # => Array

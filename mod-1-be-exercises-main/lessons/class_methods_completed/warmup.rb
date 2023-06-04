@@ -5,7 +5,7 @@ sam = User.new("Sam")
 
 
 puts sam.say_hello
-# =>
+# => "Hello, Sam"
 
 # 1. What do we call #say_hello on?
 # => "An instance of the User class", "an instance"
@@ -15,8 +15,9 @@ puts sam.say_hello
 
 # 3. Can you call #say_hello on the User class without instantiating it first? What happens?   (Ex: User.say_hello)
 User.say_hello
+# => No, an error occurs => undefined method `say_hello' for User:Class (NoMethodError)
 
 # 4. How can we access a method in our class that can say hello to someone WITHOUT instantiating a new object?
-# ...
+# ... => prepend the keyword self to the instance method to convert it to a class method
 
 
