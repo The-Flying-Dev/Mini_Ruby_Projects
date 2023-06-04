@@ -149,16 +149,41 @@ denver_biscuit_co = {
 
 # }
 # Note: day 0 is Monday, day 6 is Sunday
-#operation_hours = {}
+
+# create array with days of the week
+# convert days array to Hash
+# extract Nested Array of Hashes to be converted 
+# remove is_overnight key
+# loop through op_hrs hash, compare values and assign values
+
 days_of_the_week = [:Monday, :Tuesday, :Wednesday, :Thursday, :Friday, :Saturday, :Sunday]
+# days_hash = days_of_the_week.each_with_object({}) do |day, hash|
+#                 hash[day.to_sym] = {}
+#             end
+
 days_hash = days_of_the_week.each_with_object({}) do |day, hash|
-                hash[day] = {}
-            end
-#p days_hash
-# get hours array
+    hash[day] = {}
+end
+
+p days_hash
+#operation_hours = {}
 operation_hours = denver_biscuit_co[:hours][0][:open]
+
 operation_hours = operation_hours.map do |day|
         day.except(:is_overnight)
     end
+
+#p operation_hours
+
+operation_hours.each do |h|
+    for i in days_of_the_week       
+        if h[:day] === days_of_the_week.index(i)
+            days_hash[i] = h.except(:day)
+        end
+    end
+    days_hash
+end
+
+
+
 p days_hash
-p operation_hours
